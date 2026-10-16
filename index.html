@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ATV - Integradora IV</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header class="header">
+        <div class="logo">
+            <span>ATV</span>Int IV
+        </div>
+
+        <nav id="menu">
+            <a href="#inicio">Início</a>
+            <a href="#dados">Dados</a>
+            <a href="#cursos">Cursos</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWM9EqWzGEy-bM0Ht5dAHAlvrQLyNdxLjiHtqbEmECK2jJmA/viewform" target="_blank" rel="noopener noreferrer">Responder</a>
+        </nav>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+        <div class="hero-text">
+
+            <span class="tag">PLATAFORMA DE ESTUDOS</span>
+
+            <h1>
+                Aprenda de acordo com
+                <span>as suas necessidades.</span>
+            </h1>
+
+            <p>
+                Uma plataforma desenvolvida para entender as principais
+                dificuldades dos estudantes e transformar esses dados em
+                conteúdos e cursos personalizados.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWM9EqWzGEy-bM0Ht5dAHAlvrQLyNdxLjiHtqbEmECK2jJmA/viewform"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn primary">
+                    📝 Preencher formulário
+                </a>
+
+                <a href="#dados" class="btn secondary">
+                    Ver pesquisa
+                </a>
+
+                <a href="#cursos" class="btn secondary">
+                    Conhecer cursos
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="card-icon">📊</div>
+
+            <h3>Pesquisa dos alunos</h3>
+
+            <p>
+                Descubra quais disciplinas apresentam maior dificuldade
+                e quais conteúdos os estudantes mais procuram.
+            </p>
+
+            <div class="mini-stat">
+                <strong>28</strong>
+                <span>alunos pesquisados</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+    <section class="section" id="formulario">
+
+        <div class="section-title">
+            <span>COMO FUNCIONA</span>
+
+            <h2>
+                Conhecemos os alunos
+                antes de criar os cursos.
+            </h2>
+
+            <p>
+                A plataforma utiliza informações coletadas através de
+                formulários para identificar as principais necessidades
+                dos estudantes.
+            </p>
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">01</div>
+
+                <h3>Pesquisa</h3>
+
+                <p>
+                    Os alunos respondem perguntas sobre dificuldades,
+                    interesses e expectativas profissionais.
+                </p>
+            </div>
+
+
+            <div class="step">
+                <div class="step-number">02</div>
+
+                <h3>Análise</h3>
+
+                <p>
+                    As respostas são transformadas em estatísticas
+                    e informações visuais.
+                </p>
+            </div>
+
+
+            <div class="step">
+                <div class="step-number">03</div>
+
+                <h3>Conteúdo</h3>
+
+                <p>
+                    Os resultados ajudam a definir quais cursos e
+                    materiais devem ser desenvolvidos.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DASHBOARD -->
+    <section class="dashboard section" id="dados">
+
+        <div class="section-title">
+
+            <span>PAINEL DE DADOS</span>
+
+            <h2>
+                Perfil dos estudantes
+            </h2>
+
+            <p>
+                Exemplo de visualização dos resultados obtidos
+                através da pesquisa.
+            </p>
+
+        </div>
+ <!-- ESTATÍSTICAS -->
+        <div class="stats">
+
+            <div class="stat-card">
+                <span>👥</span>
+                <strong>28</strong>
+                <p>Alunos pesquisados</p>
+            </div>
+
+            <div class="stat-card">
+                <span>📚</span>
+                <strong>64%</strong>
+                <p>Possuem dificuldade em uma disciplina</p>
+            </div>
+
+            <div class="stat-card">
+                <span>🎓</span>
+                <strong>82%</strong>
+                <p>Pretendem trabalhar na área</p>
+            </div>
+
+            <div class="stat-card">
+                <span>💡</span>
+                <strong>71%</strong>
+                <p>Gostariam de cursos complementares</p>
+            </div>
+
+        </div>
+
+
+        <!-- GRÁFICOS -->
+        <div class="charts">
+
+            <div class="chart-card">
+
+                <h3>
+                    Disciplinas com maior dificuldade
+                </h3>
+
+                <canvas id="difficultyChart"></canvas>
+
+            </div>
+
+
+            <div class="chart-card">
+
+                <h3>
+                    Expectativa profissional
+                </h3>
+
+                <canvas id="careerChart"></canvas>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CURSOS -->
+    <section class="section courses-section" id="cursos">
+
+        <div class="section-title">
+
+            <span>CURSOS E CONTEÚDOS</span>
+
+            <h2>
+                Conteúdos baseados nas necessidades dos alunos
+            </h2>
+
+            <p>
+                Os cursos abaixo são exemplos de conteúdos que poderiam
+                ser desenvolvidos de acordo com os resultados da pesquisa.
+            </p>
+
+        </div>
+
+
+        <div class="courses">
+
+            <article class="course">
+
+                <div class="course-image blue">
+                    📚
+                </div>
+
+                <div class="course-content">
+
+                    <span class="level">
+                        MAIS PROCURADO
+                    </span>
+
+                    <h3>
+                        Revisão das principais disciplinas
+                    </h3>
+
+                    <p>
+                        Material de revisão para estudantes que
+                        apresentam dificuldades nas disciplinas
+                        fundamentais.
+                    </p>
+
+                    <div class="course-footer">
+
+                        <strong>
+                            R$ 49,90
+                        </strong>
+
+                        <button onclick="comprarCurso('Revisão das principais disciplinas')">
+                            Conhecer
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="course">
+
+                <div class="course-image green">
+                    🧠
+                </div>
+
+                <div class="course-content">
+
+                    <span class="level">
+                        COMPLEMENTAR
+                    </span>
+
+                    <h3>
+                        Preparação para a prática profissional
+                    </h3>
+
+                    <p>
+                        Conteúdos complementares para preparar
+                        o estudante para o mercado de trabalho.
+                    </p>
+
+                    <div class="course-footer">
+
+                        <strong>
+                            R$ 69,90
+                        </strong>
+
+                        <button onclick="comprarCurso('Preparação para a prática profissional')">
+                            Conhecer
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="course">
+
+                <div class="course-image purple">
+                    🎯
+                </div>
+
+                <div class="course-content">
+
+                    <span class="level">
+                        CARREIRA
+                    </span>
+
+                    <h3>
+                        Primeiros passos na profissão
+                    </h3>
+
+                    <p>
+                        Orientações e conteúdos para estudantes
+                        que estão próximos da formação.
+                    </p>
+
+                    <div class="course-footer">
+
+                        <strong>
+                            R$ 59,90
+                        </strong>
+
+                        <button onclick="comprarCurso('Primeiros passos na profissão')">
+                            Conhecer
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+        <div>
+
+            <span>AtvInt-IV</span>
+
+            <h2>
+                Seu aprendizado começa
+                entendendo suas necessidades.
+            </h2>
+
+            <p>
+                Uma plataforma pensada para transformar dados
+                em oportunidades de aprendizagem.
+            </p>
+
+        </div>
+
+        <a href="#cursos" class="btn white">
+            Explorar conteúdos
+        </a>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <div class="logo">
+            <span>ATV</span>Integradora IV
+        </div>
+
+        <p>
+            Plataforma experimental de estudos e desenvolvimento profissional.
+        </p>
+
+        <p class="copyright">
+            © 2026 Grupo 4
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
