@@ -1,98 +1,58 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EducaLink – Conectando você ao conhecimento</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-
-<header class="header">
-    <a class="logo" href="#inicio">Educa<span>Link</span></a>
-    <nav id="menu">
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#indicacoes">Indicações</a>
-       <!--<a href="#dados">Pesquisa</a>-->
-        <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdWM9EqWzGEy-bM0Ht5dAHAlvrQLyNdxLjiHtqbEmECK2jJmA/viewform" target="_blank" rel="noopener noreferrer">Responder</a>
-    </nav>
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
-</header>
-
-<section class="hero" id="inicio">
-    <div class="hero-text">
-        <h1>Educa<span>Link</span></h1>
-        <p class="slogan">Conectando você ao conhecimento</p>
-        <div class="bubble">Aprender pode ser mais fácil do que você imagina!</div>
-        <p>Está com dificuldade em alguma matéria? O EducaLink reúne indicações de professores, influenciadores e canais do YouTube que explicam diferentes matérias escolares.</p>
-        <div class="hero-buttons">
-            <a href="#indicacoes" class="btn primary">Descubra novas formas de aprender</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWM9EqWzGEy-bM0Ht5dAHAlvrQLyNdxLjiHtqbEmECK2jJmA/viewform" target="_blank" rel="noopener noreferrer" class="btn secondary">Responder a pesquisa</a>
-        </div>
-    </div>
-    <div class="hero-art" aria-hidden="true">
-        <span class="bulb">💡</span>
-        <div class="people">📚 💻 ✏️</div>
-    </div>
-</section>
-
-<section class="section" id="como-funciona">
+<section class="section" id="canais">
     <div class="section-title">
-        <h2>Três tipos de indicação, um só lugar</h2>
-        <p>Começamos ouvindo os alunos para saber onde estão as dúvidas. Depois, reunimos conteúdos que ajudam a resolvê-las.</p>
+        <h2>Canais indicados no YouTube</h2>
+        <p>Professores com explicações diretas, por matéria.</p>
     </div>
     <div class="steps">
-        <div class="step"><div class="ico">🧑‍🏫</div><h3>Professores</h3><p>Indicações de quem ensina e sabe o que cai na prova.</p></div>
-        <div class="step"><div class="ico">📱</div><h3>Influenciadores</h3><p>Criadores que explicam matérias de um jeito leve e direto.</p></div>
-        <div class="step"><div class="ico">▶️</div><h3>Canais do YouTube</h3><p>Videoaulas gratuitas para assistir no seu ritmo.</p></div>
+
+        <div class="step">
+            <div class="ico">➗</div>
+            <h3>Matemática</h3>
+            <p>DicasdeMat – Sandro Curió</p>
+            <a class="btn primary" href="https://www.youtube.com/@sandrocuriodicasdemat" target="_blank" rel="noopener noreferrer">Abrir canal</a>
+        </div>
+
+        <div class="step">
+            <div class="ico">📖</div>
+            <h3>Português</h3>
+            <p>Professor Noslen · Gramática em Vídeo · Bom de Língua</p>
+            <a class="btn primary" href="https://www.youtube.com/results?search_query=Professor+Noslen" target="_blank" rel="noopener noreferrer">Noslen</a>
+            <a class="btn primary" href="https://www.youtube.com/results?search_query=Gramática+em+Vídeo+Fábio+Alves" target="_blank" rel="noopener noreferrer">Gramática em Vídeo</a>
+            <a class="btn primary" href="https://www.youtube.com/results?search_query=Canal+Bom+de+Língua" target="_blank" rel="noopener noreferrer">Bom de Língua</a>
+        </div>
+
+        <div class="step">
+            <div class="ico">🏛️</div>
+            <h3>História</h3>
+            <p>Se Liga Nessa História · Historizando · Dez de História</p>
+            <a class="btn primary" href="https://www.youtube.com/results?search_query=Se+Liga+Nessa+História" target="_blank" rel="noopener noreferrer">Se Liga</a>
+            <a class="btn primary" href="https://www.youtube.com/results?search_query=Historizando" target="_blank" rel="noopener noreferrer">Historizando</a>
+            <a class="btn primary" href="https://www.youtube.com/results?search_query=Dez+de+História" target="_blank" rel="noopener noreferrer">Dez de História</a>
+        </div>
+
+        <div class="step">
+            <div class="ico">🌎</div>
+            <h3>Geografia</h3>
+            <p>Hiperativo Geo · Geografia com Rodrigo Baglini</p>
+            <a class="btn primary" href="https://www.youtube.com/results?search_query=Hiperativo+Geo" target="_blank" rel="noopener noreferrer">Hiperativo Geo</a>
+            <a class="btn primary" href="https://www.youtube.com/results?search_query=Geografia+com+Rodrigo+Baglini" target="_blank" rel="noopener noreferrer">Baglini</a>
+        </div>
+
+        <div class="step">
+            <div class="ico">🔬</div>
+            <h3>Ciências e Biologia</h3>
+            <p>Biologia na Cabeça · Mais Ciências</p>
+            <a class="btn primary" href="https://www.youtube.com/results?search_query=Biologia+na+Cabeça" target="_blank" rel="noopener noreferrer">Biologia na Cabeça</a>
+            <a class="btn primary" href="https://www.youtube.com/results?search_query=Mais+Ciências+Rafaela+Lima" target="_blank" rel="noopener noreferrer">Mais Ciências</a>
+        </div>
+
+        <div class="step">
+            <div class="ico">🇬🇧</div>
+            <h3>Inglês</h3>
+            <p>Cai Como uma Luva · Tia do Inglês</p>
+            <a class="btn primary" href="https://www.youtube.com/results?search_query=Cai+Como+uma+Luva" target="_blank" rel="noopener noreferrer">Cai Como uma Luva</a>
+            <a class="btn primary" href="https://www.youtube.com/results?search_query=Tia+do+Inglês" target="_blank" rel="noopener noreferrer">Tia do Inglês</a>
+        </div>
+
     </div>
 </section>
-
-<section class="section alt" id="indicacoes">
-    <div class="section-title">
-        <h2>Encontre ajuda na sua matéria</h2>
-        <p>Filtre por tipo de indicação. Os itens abaixo são exemplos para você substituir pelas indicações reais do grupo.</p>
-    </div>
-    <div class="filters" id="filters"></div>
-    <div class="courses" id="cards"></div>
-</section>
-
-<!--
-section class="section dashboard" id="dados">
-    <div class="section-title">
-        <h2>O que os alunos disseram</h2>
-        <p>Resultados da pesquisa que orienta as indicações do EducaLink.</p>
-    </div>
-    <div class="stats">
-        <div class="stat-card"><strong>28</strong><p>Alunos pesquisados</p></div>
-        <div class="stat-card"><strong>64%</strong><p>Têm dificuldade em uma disciplina</p></div>
-        <div class="stat-card"><strong>82%</strong><p>Pretendem trabalhar na área</p></div>
-        <div class="stat-card"><strong>71%</strong><p>Querem conteúdos complementares</p></div>
-    </div>
-    <div class="charts">
-        <div class="chart-card"><h3>Disciplinas com maior dificuldade</h3><canvas id="difficultyChart"></canvas></div>
-        <div class="chart-card"><h3>Expectativa profissional</h3><canvas id="careerChart"></canvas></div>
-    </div>
-</section>-->
-
-<section class="cta">
-    <div>
-        <h2>Conheça o EducaLink!</h2>
-        <p>Conte o que você sente dificuldade em aprender. Sua resposta ajuda a escolher as próximas indicações.</p>
-    </div>
-    <a class="btn white" href="https://docs.google.com/forms/d/e/1FAIpQLSdWM9EqWzGEy-bM0Ht5dAHAlvrQLyNdxLjiHtqbEmECK2jJmA/viewform" target="_blank" rel="noopener noreferrer">Responder o formulário</a>
-</section>
-
-<footer>
-    <div class="logo">Educa<span>Link</span></div>
-    <p>Conectando você ao conhecimento.</p>
-    <p class="copyright">Projeto Integradora IV · UniLaSalle Rio de Janeiro · © 2026 Grupo 4</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
